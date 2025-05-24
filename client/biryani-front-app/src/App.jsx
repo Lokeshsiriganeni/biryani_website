@@ -29,73 +29,73 @@ const App = () => {
 
   console.log(BackendData);
   return (
-    <GoogleOAuthProvider clientId="242680999955-r1l07k5jtgb088mev1kl4k647lhghq5t.apps.googleusercontent.com">
-      <MenuProvider>
-        <Router>
-          <Routes>
-            {/* <Route path="/" element={<Login />} /> */}
-            <Route
-              path="/"
-              element={
-                <ProtectedRoute>
-                  <Home />
-                </ProtectedRoute>
-              }
-            />
+    // <GoogleOAuthProvider clientId="242680999955-r1l07k5jtgb088mev1kl4k647lhghq5t.apps.googleusercontent.com">
+    <MenuProvider>
+      <Router>
+        <Routes>
+          {/* <Route path="/" element={<Login />} /> */}
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            }
+          />
 
-            <Route
-              path="/card"
-              element={
-                <ProtectedRoute>
-                  <Card />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/cart"
-              element={
-                <ProtectedRoute>
-                  <Cart />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/contact"
-              element={
-                <ProtectedRoute>
-                  <Contact />
-                </ProtectedRoute>
-              }
-            />
+          <Route
+            path="/card"
+            element={
+              <ProtectedRoute>
+                <Card />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              <ProtectedRoute>
+                <Cart />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <ProtectedRoute>
+                <Contact />
+              </ProtectedRoute>
+            }
+          />
 
-            <Route
-              path="/profile"
-              element={
-                <ProtectedRoute>
-                  <Profile />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/details"
-              element={
-                <ProtectedRoute>
-                  <DetailsPage />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/add-transaction"
-              element={
-                <ProtectedRoute>
-                  <AddTransactionPage />
-                </ProtectedRoute>
-              }
-            />
-          </Routes>
-        </Router>
-      </MenuProvider>
-    </GoogleOAuthProvider>
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/details"
+            element={
+              <ProtectedRoute>
+                <DetailsPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/add-transaction"
+            element={
+              <ProtectedRoute>
+                <AddTransactionPage />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </Router>
+    </MenuProvider>
+    // </GoogleOAuthProvider>
   );
 };
 
