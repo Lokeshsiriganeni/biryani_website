@@ -26,7 +26,7 @@ const Header = () => {
       <nav className="navbar">
         <div className="navbar-logo">Deccan Chargers</div>
         <div className={`navbar-links ${isOpen ? "active" : ""}`}>
-          <nav className="nav" onClick={() => handleNavigation("/home")}>
+          <nav className="nav" onClick={() => handleNavigation("/")}>
             Home
           </nav>
           <nav className="nav" onClick={() => handleNavigation("/about")}>

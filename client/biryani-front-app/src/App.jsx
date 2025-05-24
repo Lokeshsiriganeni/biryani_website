@@ -33,9 +33,9 @@ const App = () => {
       <MenuProvider>
         <Router>
           <Routes>
-            <Route path="/" element={<Login />} />
+            {/* <Route path="/" element={<Login />} /> */}
             <Route
-              path="/Home"
+              path="/"
               element={
                 <ProtectedRoute>
                   <Home />
