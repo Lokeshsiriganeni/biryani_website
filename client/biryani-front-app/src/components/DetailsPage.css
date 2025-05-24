@@ -1,0 +1,28 @@
+.user-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 15px 20px 20px 30px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.user-card:hover {
+  background-color: #f0f0f0;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-left: 20px;
+}

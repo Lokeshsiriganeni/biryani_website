@@ -1,0 +1,73 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="text"],
+input[type="tel"] {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 16px;
+  margin-top: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+img {
+  display: block;
+  margin: 10px auto;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+}
+
+@media (max-width: 600px) {
+  form {
+    padding: 15px 20px;
+  }
+
+  input[type="text"],
+  input[type="tel"] {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}

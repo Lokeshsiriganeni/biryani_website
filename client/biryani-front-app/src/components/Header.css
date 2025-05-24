@@ -1,0 +1,111 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Fixed Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 70px; /* Fixed height for consistency */
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #f39c12;
+  }
+  
+  .navbar-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .navbar-space {
+    height: 60px;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      overflow: hidden;
+      height: 0;
+      transition: height 0.3s ease;
+    }
+  
+    .navbar-links.active {
+      height: 200px; /* Adjust height based on content */
+    }
+  
+    .navbar-links a {
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+      border-top: 1px solid #444; /* Add a separator between links */
+    }
+  
+    .navbar-toggle {
+      display: block;
+    }
+  }
+  
+  /* Card container to avoid overlap */
+  .main-content {
+    margin-top: 80px; /* Ensures content starts below the navbar */
+    padding: 20px;
+  }
+  .nav {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav:hover {
+    color: #ffc107; /* Darker shade on hover */
+  }
+  
