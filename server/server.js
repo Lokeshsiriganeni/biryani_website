@@ -12,8 +12,8 @@ require("dotenv").config();
 
 const app = express();
 
-const GOOGLE_CLIENT_ID =
-  "242680999955-r1l07k5jtgb088mev1kl4k647lhghq5t.apps.googleusercontent.com"; // same one used in frontend
+// const GOOGLE_CLIENT_ID =
+//   "242680999955-r1l07k5jtgb088mev1kl4k647lhghq5t.apps.googleusercontent.com"; // same one used in frontend
 
 const client = new OAuth2Client(GOOGLE_CLIENT_ID);
 
@@ -98,38 +98,38 @@ app.listen(5000, () => {
 });
 // C:\Users\lokesh.s\biryani-app\server\server.js
 
-app.post("/api/auth/google", async (req, res) => {
-  const { token } = req.body;
-  console.log("inside the post");
-  try {
-    const ticket = await client.verifyIdToken({
-      idToken: token,
-      audience: GOOGLE_CLIENT_ID,
-    });
+// app.post("/api/auth/google", async (req, res) => {
+//   const { token } = req.body;
+//   console.log("inside the post");
+//   try {
+//     const ticket = await client.verifyIdToken({
+//       idToken: token,
+//       audience: GOOGLE_CLIENT_ID,
+//     });
 
-    const payload = ticket.getPayload();
+//     const payload = ticket.getPayload();
 
-    const JWT_SECRET = process.env.JWT_SECRET;
+//     const JWT_SECRET = process.env.JWT_SECRET;
 
-    // Now create your own JWT
-    const userJwt = jwt.sign(
-      {
-        email: payload.email,
-        name: payload.name,
-        picture: payload.picture,
-        sub: payload.sub, // unique Google user ID
-      },
-      JWT_SECRET,
-      { expiresIn: "1h" }
-    );
+//     // Now create your own JWT
+//     const userJwt = jwt.sign(
+//       {
+//         email: payload.email,
+//         name: payload.name,
+//         picture: payload.picture,
+//         sub: payload.sub, // unique Google user ID
+//       },
+//       JWT_SECRET,
+//       { expiresIn: "1h" }
+//     );
 
-    res.json({ jwt: userJwt });
-  } catch (err) {
-    console.log("in the catch section");
-    console.error(err);
-    res.status(401).json({ error: "Invalid token" });
-  }
-});
+//     res.json({ jwt: userJwt });
+//   } catch (err) {
+//     console.log("in the catch section");
+//     console.error(err);
+//     res.status(401).json({ error: "Invalid token" });
+//   }
+// });
 
 // adding user into table
 app.post("/api/userDetails", async (req, res) => {
