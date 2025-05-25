@@ -19,13 +19,13 @@ import Profile from "./components/Profile";
 const App = () => {
   const [BackendData, setBackendData] = useState([{}]);
 
-  useEffect(() => {
-    // Fetch data from the backend using axios
-    axios
-      .get("/api")
-      .then((response) => setBackendData(response.data.users))
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+  // useEffect(() => {
+  //   // Fetch data from the backend using axios
+  //   axios
+  //     .get("/api")
+  //     .then((response) => setBackendData(response.data.users))
+  //     .catch((error) => console.error("Error fetching data:", error));
+  // }, []);
 
   console.log(BackendData);
   return (
