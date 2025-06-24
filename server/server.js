@@ -15,24 +15,24 @@ const app = express();
 // const GOOGLE_CLIENT_ID =
 //   "242680999955-r1l07k5jtgb088mev1kl4k647lhghq5t.apps.googleusercontent.com"; // same one used in frontend
 
-const client = new OAuth2Client(GOOGLE_CLIENT_ID);
+// const client = new OAuth2Client(GOOGLE_CLIENT_ID);
 
-cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
-});
+// cloudinary.config({
+//   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+//   api_key: process.env.CLOUDINARY_API_KEY,
+//   api_secret: process.env.CLOUDINARY_API_SECRET,
+// });
 
 app.use(cors());
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: "https://your-frontend.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // if using cookies or sessions
-  })
-);
+// app.use(
+//   cors({
+//     origin: "https://your-frontend.vercel.app",
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     credentials: true,
+//   })
+// );
 
 // Test route
 app.get("/api", (req, res) => {
@@ -62,6 +62,7 @@ app.get("/api/get_existing_users", (req, res) => {
   db.query(query, (err, results) => {
     if (err) {
       console.error("Error fetching users:", err);
+      w;
       res.status(500).json({ error: "Error fetching users" });
     } else {
       // console.log("user data is" + results);
